@@ -1,22 +1,22 @@
 @import compass/reset
 @import compass/utilities
 
-@import grid-coordinates/grid
+@import grid-coordinates
+@include grid-coordinates
 
 @import blueprint/typography
 
 +blueprint-typography
 
 html
-  +grid-full
+  @extend .grid-full
   overflow: scroll
 
 body
   padding-top: 20px
   padding-bottom: 20px
-  +grid-suffix(3)
-  +grid-prefix(3)
-
+  @extend .grid-suffix-4
+  @extend .grid-prefix-4
   header
     margin: 4em 0 4em 0
     a
@@ -28,10 +28,9 @@ body
         &:hover
           color: #000099
     .outline
-      background: #D0D0D0
+      background: #d0d0d0
       margin: 3em 0 3em 0
       padding: 1em 1em 1em 1em
-    
   article
     section
       margin-bottom: 4em
