@@ -1,12 +1,23 @@
 @import compass/reset
 @import compass/utilities
+@import "compass/utilities/lists"
+
+/* Reset horizontal rule
+hr
+  margin: 0
+  padding: 0
+  border: 0
 
 @import grid-coordinates
 @include grid-coordinates
 
-@import blueprint/typography
+@import typography
 
-+blueprint-typography
+ul
+  list-style-type: disc
+
+ol
+  list-style-type: decimal
 
 html
   @extend .grid-full
@@ -15,45 +26,8 @@ html
 body
   padding-top: 20px
   padding-bottom: 20px
-  @extend .grid-suffix-4
-  @extend .grid-prefix-4
+  @extend .grid-suffix-3
+  @extend .grid-prefix-3
   header
-    margin: 4em 0 4em 0
-    a
-      +hover-link
-      h1
-        +header-text
-        font-size: 3.2em
-        line-height: 1em
-        &:hover
-          color: #000099
     .outline
       background: #d0d0d0
-      margin: 3em 0 3em 0
-      padding: 1em 1em 1em 1em
-  article
-    section
-      margin-bottom: 4em
-      h1, h2, h3, h4, h5, h6
-        +header-text
-      h1
-        +hover-link
-        font-size: 2em
-        margin-bottom: 0.75em
-        &:hover
-          color: #000099
-      h2
-        font-size: 1.5em
-        line-height: 1
-        margin-bottom: 1em
-        margin-top: 2em
-      h3
-        font-size: 1.2em
-        line-height: 1.25
-        margin-bottom: 1.25em
-      img
-        display: block
-        margin-left: auto
-        margin-right: auto
-      p
-        text-align: justify
