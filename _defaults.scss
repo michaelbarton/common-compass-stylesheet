@@ -83,11 +83,6 @@ h1, h2, h3, h4, h5, h6 {
 h2, h3, h4, h5, h6 {
   @include trailer; }
 
-h1 {
-  @include adjust-font-size-to(32px);
-  @include leader(6, 32px);
-  @include trailer(1, 32px); }
-
 h1, h2 {
   @extend .allcaps; }
 
