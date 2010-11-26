@@ -7,6 +7,7 @@
 /* Layout -------------------------------------------------------------- */
 
 @include susy;
+@import "compass/css3/border-radius";
 
 // change '.container' to match your HTML container element
 // or @extend it to apply multiple containers on your site.
@@ -32,3 +33,10 @@ header h3 {
 
 header h2 {
   @include leader(3); }
+
+pre {
+  @include leader(2);
+  @include trailer(2);
+  @include border-radius($base-line-height, $base-line-height);
+  padding: $base-line-height;
+  background-color: #333333; }
