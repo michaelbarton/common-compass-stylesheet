@@ -20,14 +20,19 @@ header.site_title {
 }
 
 div[role="navigation"] {
+  text-align: right;
   @extend .smallcaps;
+
 
   @include columns(3);
   @include leader(5);
   @include alpha;
-  text-align: right;
+
   ul {
     @include no-bullets;
+    a {
+      text-decoration: none;
+    }
   }
 }
 
@@ -43,16 +48,23 @@ div[role="main"] {
   }
 }
 
+header a {
+  text-decoration: none;
+}
+
 header h1 {
   @include leader(4, 32px);
-  @include adjust-font-size-to(32px); }
+  @include adjust-font-size-to(32px);
+}
 
 header h3 {
   font-style: italic;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
 header h2 {
-  @include leader(3); }
+  @include leader(3);
+}
 
 pre {
   @include adjust-font-size-to(20px);
