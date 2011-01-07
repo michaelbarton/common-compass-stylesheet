@@ -20,6 +20,8 @@ header.site_title {
 }
 
 div[role="navigation"] {
+  @extend .smallcaps;
+
   @include columns(3);
   @include leader(5);
   @include alpha;
