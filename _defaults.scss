@@ -57,9 +57,11 @@ pre {
   @include leader(2);
   @include trailer(2);
   @include border-radius($base-line-height, $base-line-height);
+
   padding-top: $base-line-height;
   padding-bottom: $base-line-height;
   background-color: #333333; }
+
 
 /* Typography -------------------------------------------------------------- */
 /* The following classes are for use with @extend. */
@@ -196,12 +198,6 @@ pre, code, tt {
 p {
   @include trailer; }
 
-pre {
-  margin: $base-rhythm-unit;
-  white-space: pre;
-  white-space: pre-wrap;
-  white-space: pre-line;
-  word-wrap: break-word; }
 
 blockquote {
   margin: $base-rhythm-unit;
