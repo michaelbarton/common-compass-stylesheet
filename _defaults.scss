@@ -48,23 +48,25 @@ div[role="main"] {
   }
 }
 
-header a {
-  text-decoration: none;
+header {
+  a {
+    text-decoration: none;
+  }
+  h1 {
+    @include leader(4, 32px);
+    @include adjust-font-size-to(32px);
+  }
+
+  h2 {
+    @include leader(3);
+  }
+
+  h3 {
+    font-style: italic;
+    font-weight: normal;
+  }
 }
 
-header h1 {
-  @include leader(4, 32px);
-  @include adjust-font-size-to(32px);
-}
-
-header h3 {
-  font-style: italic;
-  font-weight: normal;
-}
-
-header h2 {
-  @include leader(3);
-}
 
 pre {
   @include adjust-font-size-to(20px);
