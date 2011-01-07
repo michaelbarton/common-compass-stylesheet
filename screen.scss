@@ -23,23 +23,3 @@
 // and 20 is the (optional) line-height.
 
 /* Styles -------------------------------------------------------------- */
-
-header h1 {
-  @include leader(4, 32px);
-  @include adjust-font-size-to(32px); }
-
-header h3 {
-  font-style: italic;
-  font-weight: normal; }
-
-header h2 {
-  @include leader(3); }
-
-pre {
-  @include adjust-font-size-to(20px);
-  @include leader(2);
-  @include trailer(2);
-  @include border-radius($base-line-height, $base-line-height);
-  padding-top: $base-line-height;
-  padding-bottom: $base-line-height;
-  background-color: #333333; }

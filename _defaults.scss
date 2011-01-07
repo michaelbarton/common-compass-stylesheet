@@ -12,6 +12,55 @@
 @import "prettify";
 @import "man_page";
 
+// Customisation --------------------------------------------------------
+
+header.site_title {
+  @include full;
+  @include prefix(3);
+}
+
+div[role="navigation"] {
+  @include columns(3);
+  @include leader(5);
+  @include alpha;
+  text-align: right;
+  ul {
+    @include no-bullets;
+  }
+}
+
+div[role="main"] {
+  @include columns(9);
+  @include omega;
+  article {
+    @include columns(6,9);
+  }
+  aside {
+    @include columns(3,9);
+    @include omega(9);
+  }
+}
+
+header h1 {
+  @include leader(4, 32px);
+  @include adjust-font-size-to(32px); }
+
+header h3 {
+  font-style: italic;
+  font-weight: normal; }
+
+header h2 {
+  @include leader(3); }
+
+pre {
+  @include adjust-font-size-to(20px);
+  @include leader(2);
+  @include trailer(2);
+  @include border-radius($base-line-height, $base-line-height);
+  padding-top: $base-line-height;
+  padding-bottom: $base-line-height;
+  background-color: #333333; }
+
 /* Typography -------------------------------------------------------------- */
 /* The following classes are for use with @extend. */
 
