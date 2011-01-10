@@ -71,13 +71,15 @@ header {
 
 pre {
   @include adjust-font-size-to(20px);
-  @include leader(2);
-  @include trailer(2);
+  @include leader(1);
+  @include trailer(1);
   @include border-radius($base-line-height, $base-line-height);
+  @include box-shadow(#333, 5px, 5px, 5px, 0);
 
-  padding-top: $base-line-height;
   padding-bottom: $base-line-height;
-  background-color: #333333; }
+  padding-left: $base-line-height;
+  background-color: #333333;
+}
 
 
 /* Typography -------------------------------------------------------------- */
