@@ -12,23 +12,60 @@
 @import "prettify";
 @import "man_page";
 
+
+// Colors --------------------------------------------------------------
+
+$base: #262526;
+$alt: #F60A20;
+$text: #8C8979;
+$highlight: #404040;
+$emph: white;
+
 // Customisation --------------------------------------------------------
+
+@mixin text-area {
+  background: $highlight;
+}
+
+header {
+  a {
+    text-decoration: none;
+  }
+}
 
 header.site_title {
   @include full;
-  @include prefix(3);
+  @include prefix(7);
+  h1, h2, h3 {
+    color: $emph;
+  }
+  h1 {
+    @include leader(4, 32px);
+    @include adjust-font-size-to(32px);
+    font-weight: bold;
+  }
+  h3 {
+    font-style: italic;
+    font-weight: normal;
+  }
 }
 
 div[role="navigation"] {
-  text-align: right;
-  @extend .smallcaps;
-
-
-  @include columns(3);
+  @include columns(6);
   @include leader(5);
   @include alpha;
 
+  text-align: right;
+  @extend .allcaps;
+  @include text-area;
+  @include adjust-font-size-to(10px);
+
   ul {
+    @include columns(4,6);
+    @include prefix(1);
+    @include suffix(1);
+    @include omega(6);
+
     @include no-bullets;
     a {
       text-decoration: none;
@@ -37,36 +74,23 @@ div[role="navigation"] {
 }
 
 div[role="main"] {
-  @include columns(9);
+  @include columns(18);
   @include omega;
   article {
-    @include columns(6,9);
+    @include columns(12,18);
+    @include prefix(1);
+    @include suffix(1);
+    background: $highlight;
   }
   aside {
-    @include columns(3,9);
-    @include omega(9);
+    @include columns(4,18);
+    @include omega(18);
   }
-}
-
-header {
-  a {
-    text-decoration: none;
-  }
-  h1 {
-    @include leader(4, 32px);
-    @include adjust-font-size-to(32px);
-    font-weight: bold;
-  }
-
   h2 {
-    @include leader(3);
-  }
-
-  h3 {
-    font-style: italic;
-    font-weight: normal;
+    @include leader(1);
   }
 }
+
 
 
 pre {
@@ -78,7 +102,7 @@ pre {
 
   padding-bottom: $base-line-height;
   padding-left: $base-line-height;
-  background-color: #333333;
+  background-color: $base;
 }
 
 
@@ -113,7 +137,8 @@ html {
 
 body {
   @extend .sans;
-  color: $base; }
+  background: $base;
+  color: $text; }
 
 /* Selected Text -------------------------------------------------------------- */
 /* -moz- must be declared separately */
